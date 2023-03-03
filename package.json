@@ -1,0 +1,28 @@
+{
+  "name": "team-profiles-generator",
+  "version": "1.0.0",
+  "description": "Generates team members profiles",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartaMilewczyk/team-profiles-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartaMilewczyk/team-profiles-generator/issues"
+  },
+  "homepage": "https://github.com/MartaMilewczyk/team-profiles-generator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.4",
+    "path": "^0.12.7"
+  }
+}
