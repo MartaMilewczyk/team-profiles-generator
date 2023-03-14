@@ -20,21 +20,36 @@ function createTeamManager() {
             type: 'input',
             name: 'name',
             message: "Please enter Manager's name:",
+            validate: (name) => {
+                if(!name) return "Name is empty! Enter a name";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'id',
             message: "Please enter Manager's ID:",
+            validate: (id) => {
+                if(!id) return "ID is empty! Enter an ID";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'email',
             message: "Please enter Manager's email:",
+            validate: (email) => {
+                if(!email) return "Email is empty! Enter an email";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'number',
             message: "Please enter Manager's office number:",
+            validate: (number) => {
+                return Number.isInteger(Number(number)) || "Please enter a number";
+            }
         }]).then((userInput) => {
             const manager = new Manager(
                 userInput.name, 
@@ -60,28 +75,48 @@ function createNewEmployee() {
             type: 'input',
             name: 'name',
             message: `Please enter Employee's name:`,
+            validate: (name) => {
+                if(!name) return "Name is empty! Enter a name";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'id',
             message: `Please enter Employee's ID:`,
+            validate: (id) => {
+                if(!id) return "ID is empty! Enter an ID";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'email',
             message: `Please enter Employee's email:`,
+            validate: (email) => {
+                if(!email) return "Email is empty! Enter an email";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'school',
             message: "Please enter Employee's school name:",
             when: input => input.occupation === "Intern",
+            validate: (school) => {
+                if(!school) return "School name is empty! Enter a school name";
+                else return true;
+            }
         },
         {
             type: 'input',
             name: 'github',
             message: "Please enter Employee's github profile:",
             when: input => input.occupation === "Engineer",
+            validate: (github) => {
+                if(!github) return "Github is empty! Enter a Github profile";
+                else return true;
+            }
         },
         {
             type: 'confirm',
